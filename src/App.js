@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import logo from './';
 import './App.css';
+import Home from './componentes/Home';
+import Livros from './componentes/Livros';
+import Foter from './componentes/Footer';
 
-function App() {
+
+ export default function  App() {
+
+  const tituhom="Biblioteca"
+  const parag="Seja bem-vindo a Blibioteca"
+  const livros=['HarryPotter','Senhor dos aneis','Berserk']
+  const rodape="Natan Cruz FIAP"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Home tituhom={tituhom}/>
+      <Home parag={parag}/>
+      <Livros livros={livros}/>
+      <Foter rodape={rodape}/> 
     </div>
+
+    
   );
 }
 
-export default App;
+
+
